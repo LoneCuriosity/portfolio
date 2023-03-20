@@ -40,7 +40,7 @@ export default function Home() {
         <Image className="rounded" width="300" height="300" src="/me.png" alt="TAS" />
         <div className={inter.className + " flex flex-col gap-4 items-center"}>
           <p className="text-white text-4xl">Hello, My name is Ramon Garcia Jr</p>
-          <p className="text-white px-[25%] text-center">I was born and grew up in the Rio Grande Valley. As a young child, I was always fascinated by how things worked. My grandmother would tell me a story about how when I was young I would stand by the window for hours watching as machines built my neighborhood around me. Growing up I don't think I ever lost this wonder but rather found a way to channel it. I love to tinker with stuff, build stuff and yes break stuff. I think this quote from Henry Petroski puts it best.</p>
+          <p className="text-white px-[25%] text-center">I was born and grew up in the Rio Grande Valley. As a young child, I was always fascinated by how things worked. My grandmother would tell me a story about how when I was young I would stand by the window for hours watching as machines built my neighborhood around me. Growing up I dont think I ever lost this wonder but rather found a way to channel it. I love to tinker with stuff, build stuff and yes break stuff. I think this quote from Henry Petroski puts it best.</p>
           <div className="flex justify-center flex-col items-center">
             <q className="text-white text-xl">Engineering is the art of curiosity. It is about exploring the unknown, asking questions, and finding answers that can change the world.</q>
             <p className="text-white font-thin">- Henry Petroski</p>
