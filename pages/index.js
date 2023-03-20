@@ -32,6 +32,15 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="flex flex-row gap-6">
+          <Image className="rounded" width="500" height="500" src="/TAS.jpg" alt="TAS" />
+          <div className={inter.className + " flex flex-col gap-4"}>
+            <p className="text-white text-4xl">TAS(Telemetry Acquisition System) | 2022 - 2023</p>
+            <p className="text-white">Problem: Design a system that could be installed within a high-powered amateur rocket and could provide different information about it during and after the flight. Information to be collected includes but is not limited to velocity, altitude, temperature, acceleration, location, pressure, etc. The system should have a live data streaming component to it as well.</p>
+            <p className="text-white">Solution: TAS(Telemetry Acquisition System) was created to address most of not of the requirements that were required. Some of the components used within TAS include BME280, BMI088, LoRa Module, PA1616 GPS module, PCF2385, and SD module. The combination of these systems forms TAS. Using the LoRa module TAS can stream live data packets as far as 15 km. TAS also takes advantage of its GPS capabilities to track its location during and after the flight to better allow our recovery team to pinpoint the location of the rocket during recovery operations.</p>
+          </div>
+        </div>
+        
       </div>
 
       <hr className='border-0 bg-[#1F1F1F] h-[2px] mx-[10%]'></hr>
