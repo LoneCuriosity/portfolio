@@ -13,11 +13,13 @@ const Navbar = () => {
                     <p className={inter.className + " pl-3 text-[#646464]"}>ramon.garcia08@utrgv.edu</p>
                 </button>
                 <ul className={inter.className + " flex flex-row gap-3 text-[#646464] items-center"}>
-                    <li><button>LinkedIn</button></li>
+                    <li><a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank">LinkedIn</a></li>
                     <li>/</li>
-                    <li><button>Github</button></li>
+                    <li><a href="https://github.com/LoneCuriosity" target="_blank">Github</a></li>
                     <li>/</li>
-                    <li><button>Projects</button></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li>/</li>
+                    <li><a href="#about">About Me</a></li>
                     <li>/</li>
                     <li><a href="/Ramon Garcia Jr - Resume.pdf" target="_blank">Resume</a></li>
                 </ul>

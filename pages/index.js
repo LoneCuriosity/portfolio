@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-[10%] py-6 flex flex-col gap-[5rem] bg-[#161616]">
+      <div id="projects" className="px-[10%] py-6 flex flex-col gap-[5rem] bg-[#161616]">
 
         <div className="flex flex-row gap-6">
           <Image className="rounded" width="500" height="500" src="/TAS.jpg" alt="TAS" />
@@ -36,7 +36,7 @@ export default function Home() {
 
       <hr className='border-0 bg-[#1F1F1F] h-[2px] mx-[10%]'></hr>
 
-      <div className="px-[10%] py-6 gap-6 flex jusitfy-center items-center flex-col bg-[#161616]">
+      <div id="about" className="px-[10%] py-6 gap-6 flex jusitfy-center items-center flex-col bg-[#161616]">
         <Image className="rounded" width="300" height="300" src="/me.png" alt="TAS" />
         <div className={inter.className + " flex flex-col gap-4 items-center"}>
           <p className="text-white text-4xl">Hello, My name is Ramon Garcia Jr</p>
@@ -58,9 +58,17 @@ export default function Home() {
       <div className={inter.className + " bg-[#1a1a1a] py-6 flex flex-col justify-center items-center"}>
         <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2023</p>
         <div className={inter.className + " gap-2 font-thin flex flex-row text-white"}>
-          <p>Email: ramon.garcia08@utrgv.edu</p>
+          <a href="mailto:ramon.garcia08@utrgv.edu">Email: ramon.garcia08@utrgv.edu</a>
           <p>&#8226;</p>
-          <p>Phone: (956) 438-9466</p>
+          <a href="tel:+19564389466">Phone: (956) 438-9466</a>
+        </div>
+        <div className="pt-2 flex flex-row gap-5">
+          <a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank">
+            <Image alt="linkedin" width="36" height="36" src="/linkedin-2-240.png"></Image>
+          </a>
+          <a href="https://github.com/LoneCuriosity" target="_blank">
+            <Image alt="github" width="36" height="36" src="/github-1-240.png"></Image>
+          </a>
         </div>
       </div>
     </div>
