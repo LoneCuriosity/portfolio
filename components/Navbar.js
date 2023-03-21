@@ -24,7 +24,7 @@ const Navbar = () => {
                     <li><a href="/Ramon Garcia Jr - Resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </div>
-            <hr className='border-0 bg-[#1F1F1F] h-[2px]'></hr>
+            <hr className='border-0 bg-[#2F2F2F] h-[2px]'></hr>
         </div>
     );
 }
