@@ -3,8 +3,12 @@ import Image from "next/image"
 import { Inter } from "next/font/google"
 import Tag from "@/components/Tag"
 const inter = Inter({ weight: ["400", "200"], subsets: ["latin"] })
+import { useState, useEffect } from "react"
+import Title from "@/components/Title"
 
 export default function Home() {
+  const size = useWindowSize();
+
   return (
     <div className="bg-dotted-spacing-[40px] bg-dotted-[#646464] bg-[#161616]" >
       <div className="h-screen flex flex-col">
@@ -13,7 +17,7 @@ export default function Home() {
           <div className="flex flex-col gap-5 justify-center items-center flex-1">
             <Image alt="me" width="200" height="200" src="/me.png"></Image>
             <p className={inter.className + " text-xl text-[#646464]"}>Hi, I’m Ramon 👋</p>
-            <p className={inter.className + " text-center text-7xl bg-gradient-to-t from-[#FFFFFF] to-[#646464] bg-clip-text text-transparent h-[15rem]"}>Web Developer <br /> Tinkerer, Creator and <br /> Programmer.</p>
+            <p className={inter.className + " text-center text-[9vw] bg-gradient-to-t from-[#FFFFFF] to-[#646464] bg-clip-text py-2 text-transparent lg:text-7xl"}>Web Developer <br /> Tinkerer, Creator and <br /> Programmer.</p>
           </div>
           <button className="flex flex-col items-center mb-5 animate-bounce">
             <p className={inter.className + " text-white font-light"}>Projects</p>
@@ -24,10 +28,15 @@ export default function Home() {
 
       <div id="projects" className="px-[10%] py-6 flex flex-col gap-[5rem] bg-[#161616]">
 
-        <div className="flex flex-row gap-6">
-          <Image className="rounded" width="500" height="500" src="/TAS.jpg" alt="TAS" />
-          <div className={inter.className + " flex flex-col gap-2"}>
-            <p className="text-white text-2xl">TAS(Telemetry Acquisition System) | 2022 - 2023</p>
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="relative basis-1/3 w-full">
+            <Image src="/TAS.jpg" alt="TAS" size={size.width < 1024 ? "100vw" : ""} className="object-cover"/>
+          </div>
+          <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+            <div>
+              <Title>TAS (Telemetry Acquisition System)</Title>
+              <p className="text-white text-xl">2022 - 2023</p>
+            </div>
             <div className="flex flex-row gap-2">
               <Tag BgColor="bg-lime-200" TxColor="text-lime-700" text="Soldering" />
               <Tag BgColor="bg-blue-200" TxColor="text-blue-700" text="CAD" />
@@ -38,10 +47,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-row gap-6">
-          <Image src="/TAS GUI.jpeg" alt="TAS GUI" width="505" height="0" className="aspect-auto" />
-          <div className={inter.className + " flex flex-col gap-2"}>
-            <p className="text-white text-2xl">TAS GUI(Telemetry Acquisition System) | 2022 - 2023</p>
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="relative basis-1/3 w-full">
+            <Image src="/TAS GUI.jpeg" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} className="object-cover"/>
+          </div>
+          <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+            <div>
+              <Title>TAS GUI (Telemetry Acquisition System)</Title>
+              <p className="text-white text-xl">2022 - 2023</p>
+            </div>
             <div className="flex flex-row gap-2">
               <Tag BgColor="bg-teal-200" TxColor="text-teal-700" text="tailwind" />
               <Tag BgColor="bg-fuchsia-200" TxColor="text-fuchsia-700" text="html" />
@@ -59,10 +73,10 @@ export default function Home() {
       <div id="about" className="px-[10%] py-6 gap-6 flex jusitfy-center items-center flex-col bg-[#161616]">
         <Image className="rounded" width="300" height="300" src="/me.png" alt="TAS" />
         <div className={inter.className + " flex flex-col gap-4 items-center"}>
-          <p className="text-white text-4xl">Hello, My name is Ramon Garcia Jr</p>
-          <p className="text-white px-[25%] text-center font-thin">I was born and grew up in the Rio Grande Valley. As a young child, I was always fascinated by how things worked. My grandmother would tell me a story about how when I was young I would stand by the window for hours watching as machines built my neighborhood around me. Growing up I dont think I ever lost this wonder but rather found a way to channel it. I love to tinker with stuff, build stuff and yes break stuff. I think this quote from Henry Petroski puts it best.</p>
+          <p className="text-white lg:text-4xl text-md">Hello, My name is Ramon Garcia Jr</p>
+          <p className="text-white lg:px-[25%] text-center font-thin">I was born and grew up in the Rio Grande Valley. As a young child, I was always fascinated by how things worked. My grandmother would tell me a story about how when I was young I would stand by the window for hours watching as machines built my neighborhood around me. Growing up I dont think I ever lost this wonder but rather found a way to channel it. I love to tinker with stuff, build stuff and yes break stuff. I think this quote from Henry Petroski puts it best.</p>
           <div className="flex justify-center flex-col items-center">
-            <q className="text-white text-lg">Engineering is the art of curiosity. It is about exploring the unknown, asking questions, and finding answers that can change the world.</q>
+            <q className="text-white text-lg lg:text-left text-center">Engineering is the art of curiosity. It is about exploring the unknown, asking questions, and finding answers that can change the world.</q>
             <p className="text-white font-thin">- Henry Petroski</p>
           </div>
         </div>
@@ -77,9 +91,9 @@ export default function Home() {
 
       <div className={inter.className + " bg-[#2F2F2F] py-6 flex flex-col justify-center items-center"}>
         <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2023</p>
-        <div className={inter.className + " gap-2 font-thin flex flex-row text-white"}>
+        <div className={inter.className + " lg:gap-2 lg:text-left text-center font-thin flex lg:flex-row flex-col text-white"}>
           <a href="mailto:ramon.garcia08@utrgv.edu">Email: ramon.garcia08@utrgv.edu</a>
-          <p>&#8226;</p>
+          {size.width > 1024 && <p>&#8226;</p>}
           <a href="tel:+19564389466">Phone: (956) 438-9466</a>
         </div>
         <div className="pt-2 flex flex-row gap-5">
@@ -93,4 +107,27 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
 }
