@@ -35,11 +35,11 @@ const Navbar = () => {
 
             <div className="hidden lg:block flex flex-col gap-3 px-[10%]">
                 <div className="flex flex-row justify-between py-3">
-                    <button onClick={() => { window.location.href = "mailto:ramon.garcia08@utrgv.edu" }} className="flex flex-row items-center">
+                    <button onClick={() => { window.location.href = "mailto:ramon@ramongarciajr.tech" }} className="flex flex-row items-center">
                         <div className="h-[50px] w-[50px] bg-[#212121] rounded-full flex flex-col justify-center items-center">
                             <Image alt="email" className="opacity-30" width="25" height="25" src="/mail-thin-240.png"></Image>
                         </div>
-                        <p className={inter.className + " pl-3 text-[#646464]"}>ramon.garcia08@utrgv.edu</p>
+                        <p className={inter.className + " pl-3 text-[#646464]"}>ramon@ramongarciajr.tech</p>
                     </button>
                     <ul className={inter.className + " flex flex-row gap-3 text-[#646464] items-center"}>
                         <li><a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank">LinkedIn</a></li>

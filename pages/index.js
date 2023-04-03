@@ -73,7 +73,7 @@ export default function Home() {
       <div id="about" className="px-[10%] py-6 gap-6 flex jusitfy-center items-center flex-col bg-[#161616]">
         <Image className="rounded" width="300" height="300" src="/me.png" alt="TAS" />
         <div className={inter.className + " flex flex-col gap-4 items-center"}>
-          <p className="text-white lg:text-4xl text-md">Hello, My name is Ramon Garcia Jr</p>
+          <p className="text-white text-4xl text-md">{size.width < 1024 ? "Ramon Garcia Jr" : "Hello, My name is Ramon Garcia Jr"}</p>
           <p className="text-white lg:px-[25%] text-center font-thin">I was born and grew up in the Rio Grande Valley. As a young child, I was always fascinated by how things worked. My grandmother would tell me a story about how when I was young I would stand by the window for hours watching as machines built my neighborhood around me. Growing up I dont think I ever lost this wonder but rather found a way to channel it. I love to tinker with stuff, build stuff and yes break stuff. I think this quote from Henry Petroski puts it best.</p>
           <div className="flex justify-center flex-col items-center">
             <q className="text-white text-lg lg:text-left text-center">Engineering is the art of curiosity. It is about exploring the unknown, asking questions, and finding answers that can change the world.</q>
@@ -92,7 +92,7 @@ export default function Home() {
       <div className={inter.className + " bg-[#2F2F2F] py-6 flex flex-col justify-center items-center"}>
         <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2023</p>
         <div className={inter.className + " lg:gap-2 lg:text-left text-center font-thin flex lg:flex-row flex-col text-white"}>
-          <a href="mailto:ramon.garcia08@utrgv.edu">Email: ramon.garcia08@utrgv.edu</a>
+          <a href="mailto:ramon@ramongarciajr.tech">Email: ramon@ramongarciajr.tech</a>
           {size.width > 1024 && <p>&#8226;</p>}
           <a href="tel:+19564389466">Phone: (956) 438-9466</a>
         </div>
