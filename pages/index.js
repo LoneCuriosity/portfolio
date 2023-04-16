@@ -5,6 +5,7 @@ import Tag from "@/components/Tag"
 const inter = Inter({ weight: ["400", "200"], subsets: ["latin"] })
 import { useState, useEffect } from "react"
 import Title from "@/components/Title"
+import Link from "next/link"
 
 export default function Home() {
   const size = useWindowSize();
@@ -30,7 +31,7 @@ export default function Home() {
 
         <div className="flex flex-col xl:flex-row gap-6">
           <div className="relative basis-1/3 w-full">
-            <Image src="/TAS.jpg" alt="TAS" size={size.width < 1024 ? "100vw" : ""} className="object-cover"/>
+            <Image src="/TAS.jpg" alt="TAS" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover" />
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
@@ -42,14 +43,19 @@ export default function Home() {
               <Tag BgColor="bg-blue-200" TxColor="text-blue-700" text="CAD" />
               <Tag BgColor="bg-green-200" TxColor="text-green-700" text="C++" />
             </div>
-            <p className="text-white font-thin">Objective: Develop a comprehensive system capable of being integrated into a high-powered amateur rocket to collect and transmit vital flight data in real-time. The data to be collected includes but is not limited to velocity, altitude, temperature, acceleration, location, and pressure.</p>
-            <p className="text-white font-thin">Solution: The Telemetry Acquisition System (TAS) was specifically engineered to address the requirements of the project. TAS is comprised of several key components such as BME280, BMI088, LoRa Module, PA1616 GPS module, PCF2385, and SD module. The integration of these components enables TAS to gather critical flight data and transmit it in real-time over extended distances, up to 15 kilometers, via the LoRa module. Additionally, TASs GPS capabilities allow for the tracking of the rockets precise location, providing valuable information to recovery teams during and after the flight.</p>
+            <p className="text-white font-thin">TAS (Telemetry Acquisition System) was project I worked on while the telemtry lead for the rocket lacunhers. The goal of the custom designed circuit board was to gather as much infoamion possiable about the rocket in flight. Some of the date we are logging includes temprature, vecloity, accealrtion, pressure, rotation.</p>
+            <Link className="flex flex-row gap-2" href="/projects/tas">
+              <p className="text-white font uppercase">Read More</p>
+              <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+            </Link>
+            {/*<p className="text-white font-thin">Objective: Develop a comprehensive system capable of being integrated into a high-powered amateur rocket to collect and transmit vital flight data in real-time. The data to be collected includes but is not limited to velocity, altitude, temperature, acceleration, location, and pressure.</p>*/}
+            {/*<p className="text-white font-thin">Solution: The Telemetry Acquisition System (TAS) was specifically engineered to address the requirements of the project. TAS is comprised of several key components such as BME280, BMI088, LoRa Module, PA1616 GPS module, PCF2385, and SD module. The integration of these components enables TAS to gather critical flight data and transmit it in real-time over extended distances, up to 15 kilometers, via the LoRa module. Additionally, TASs GPS capabilities allow for the tracking of the rockets precise location, providing valuable information to recovery teams during and after the flight.</p>*/}
           </div>
         </div>
 
         <div className="flex flex-col xl:flex-row gap-6">
           <div className="relative basis-1/3 w-full">
-            <Image src="/TAS GUI.jpeg" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} className="object-cover"/>
+            <Image src="/TAS GUI.jpeg" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover" />
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
@@ -61,8 +67,13 @@ export default function Home() {
               <Tag BgColor="bg-fuchsia-200" TxColor="text-fuchsia-700" text="html" />
               <Tag BgColor="bg-orange-200" TxColor="text-orange-700" text="Rust" />
             </div>
-            <p className="text-white font-thin">Objective: Develop a system capable of interfacing with TAS, displaying live data in real-time, and recovering corrupted data packets when possible. Additionally, the system should allow for communication with the rocke</p>
-            <p className="text-white font-thin">Solution: To address this challenge, the TAS Graphical User Interface (TAS GUI) was developed. The software provides a user-friendly interface for displaying live data collected by TAS and recovering corrupted packets. The final product is displayed on the side of this text. The TAS GUI employs the Tauri library, a powerful tool that facilitates the creation of a desktop application using HTML and CSS on the front end and Rust on the back end. The Tauri backend enables seamless communication with the underlying operating system and facilitates communication with the rocket via USB using serial communication protocols.</p>
+            <p className="text-white font-thin">TAS (Telemetry Acquisition System) was project I worked on while the telemtry lead for the rocket lacunhers. The goal of the custom designed circuit board was to gather as much infoamion possiable about the rocket in flight. Some of the date we are logging includes temprature, vecloity, accealrtion, pressure, rotation.</p>
+            <Link className="flex flex-row gap-2" href="/projects/tas">
+              <p className="text-white font uppercase">Read More</p>
+              <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+            </Link>
+            {/*<p className="text-white font-thin">Objective: Develop a system capable of interfacing with TAS, displaying live data in real-time, and recovering corrupted data packets when possible. Additionally, the system should allow for communication with the rocke</p>*/}
+            {/*<p className="text-white font-thin">Solution: To address this challenge, the TAS Graphical User Interface (TAS GUI) was developed. The software provides a user-friendly interface for displaying live data collected by TAS and recovering corrupted packets. The final product is displayed on the side of this text. The TAS GUI employs the Tauri library, a powerful tool that facilitates the creation of a desktop application using HTML and CSS on the front end and Rust on the back end. The Tauri backend enables seamless communication with the underlying operating system and facilitates communication with the rocket via USB using serial communication protocols.</p>*/}
           </div>
         </div>
 
