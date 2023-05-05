@@ -13,7 +13,7 @@ const Navbar = () => {
                     {menuOpen ?
                         <Image alt="menu" width="48" height="48" src="/x-mark-lined-240.png" class="absolute top-0 z-10"></Image>
                         :
-                        <Image alt="menu" width="48" height="48" src="/menu-left-lined-240.png" class="absolute top-0 pl-2 z-10"></Image>
+                        <Image alt="menu" width="48" height="48" src="/menu-left-lined-240.png" className="absolute top-0 pl-2 z-10"></Image>
                     }
                 </button>
                 {menuOpen &&
