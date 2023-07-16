@@ -6,6 +6,7 @@ const inter = Inter({ weight: ["400", "200"], subsets: ["latin"] })
 import { useState, useEffect } from "react"
 import Title from "@/components/Title"
 import Link from "next/link"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   const size = useWindowSize();
@@ -30,8 +31,8 @@ export default function Home() {
       <div id="projects" className="px-[10%] py-6 flex flex-col gap-[5rem] bg-[#161616]">
 
         <div className="flex flex-col xl:flex-row gap-6">
-          <div className="relative basis-1/3 w-full">
-            <Image src="/TAS.jpg" alt="TAS" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover" />
+          <div className="relative basis-1/3 w-full aspect-video">
+            <Image src="/TAS_v2_2.jpeg" alt="TAS" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
@@ -43,19 +44,17 @@ export default function Home() {
               <Tag BgColor="bg-blue-200" TxColor="text-blue-700" text="CAD" />
               <Tag BgColor="bg-green-200" TxColor="text-green-700" text="C++" />
             </div>
-            <p className="text-white font-thin">TAS (Telemetry Acquisition System) was project I worked on while the telemtry lead for the rocket lacunhers. The goal of the custom designed circuit board was to gather as much infoamion possiable about the rocket in flight. Some of the date we are logging includes temprature, vecloity, accealrtion, pressure, rotation.</p>
+            <p className="text-white font-thin">As the telemetry lead for rocket launchers, I had the opportunity to contribute to an exciting project called TAS (Telemetry Acquisition System). This project involved the design and development of a custom circuit board specifically tailored to gather an extensive range of data during rocket flights. Our primary objective was to capture critical information, including temperature, velocity, acceleration, pressure, and rotation, enabling us to acquire a comprehensive understanding of the rocket&apos;s behavior throughout its journey into space. By meticulously logging these parameters, we aimed to enhance our analysis and improve the overall performance and safety of future missions.</p>
             <Link className="flex flex-row gap-2" href="/projects/tas">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
-            {/*<p className="text-white font-thin">Objective: Develop a comprehensive system capable of being integrated into a high-powered amateur rocket to collect and transmit vital flight data in real-time. The data to be collected includes but is not limited to velocity, altitude, temperature, acceleration, location, and pressure.</p>*/}
-            {/*<p className="text-white font-thin">Solution: The Telemetry Acquisition System (TAS) was specifically engineered to address the requirements of the project. TAS is comprised of several key components such as BME280, BMI088, LoRa Module, PA1616 GPS module, PCF2385, and SD module. The integration of these components enables TAS to gather critical flight data and transmit it in real-time over extended distances, up to 15 kilometers, via the LoRa module. Additionally, TASs GPS capabilities allow for the tracking of the rockets precise location, providing valuable information to recovery teams during and after the flight.</p>*/}
           </div>
         </div>
 
         <div className="flex flex-col xl:flex-row gap-6">
-          <div className="relative basis-1/3 w-full">
-            <Image src="/TAS GUI.jpeg" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover" />
+          <div className="relative basis-1/3 aspect-video w-full">
+            <Image src="/TAS GUI.jpeg" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
@@ -67,13 +66,33 @@ export default function Home() {
               <Tag BgColor="bg-fuchsia-200" TxColor="text-fuchsia-700" text="html" />
               <Tag BgColor="bg-orange-200" TxColor="text-orange-700" text="Rust" />
             </div>
-            <p className="text-white font-thin">TAS (Telemetry Acquisition System) was project I worked on while the telemtry lead for the rocket lacunhers. The goal of the custom designed circuit board was to gather as much infoamion possiable about the rocket in flight. Some of the date we are logging includes temprature, vecloity, accealrtion, pressure, rotation.</p>
-            <Link className="flex flex-row gap-2" href="/projects/tas">
+            <p className="text-white font-thin">During my tenure as the telemetry lead for rocket launchers, I had the privilege of working on TAS (Telemetry Acquisition System), a remarkable project that aimed to revolutionize data collection during rocket flights. Our main objective was to develop a cutting-edge custom-designed circuit board capable of gathering an extensive array of information about the rocket&apos;s performance in flight. The data we diligently logged encompassed crucial parameters such as temperature, velocity, acceleration, pressure, and rotation, enabling us to gain invaluable insights for optimizing future missions and ensuring the highest levels of safety and efficiency.</p>
+            <Link className="flex flex-row gap-2" href="/projects/tas_gui">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
-            {/*<p className="text-white font-thin">Objective: Develop a system capable of interfacing with TAS, displaying live data in real-time, and recovering corrupted data packets when possible. Additionally, the system should allow for communication with the rocke</p>*/}
-            {/*<p className="text-white font-thin">Solution: To address this challenge, the TAS Graphical User Interface (TAS GUI) was developed. The software provides a user-friendly interface for displaying live data collected by TAS and recovering corrupted packets. The final product is displayed on the side of this text. The TAS GUI employs the Tauri library, a powerful tool that facilitates the creation of a desktop application using HTML and CSS on the front end and Rust on the back end. The Tauri backend enables seamless communication with the underlying operating system and facilitates communication with the rocket via USB using serial communication protocols.</p>*/}
+          </div>
+        </div>
+
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="relative basis-1/3 aspect-video w-full">
+            <Image src="/Image API.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
+          </div>
+          <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+            <div>
+              <Title>Image Reset API</Title>
+              <p className="text-white text-xl">2023</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js" />
+              <Tag BgColor="bg-cyan-200" TxColor="text-cyan-700" text="json" />
+              <Tag BgColor="bg-yellow-200" TxColor="text-yellow-700" text="jimp" />
+            </div>
+            <p className="text-white font-thin">The reset image API, currently in use, serves as a crucial tool for extracting pixel data from public image URLs and returning it in the form of a JSON object. Originally developed to facilitate the integration of image data into a custom script for the game Garry&apos;s Mod, this API worked seamlessly with an E2 script within the game, enabling the display of images. Since the game lacked a built-in mechanism to directly pass image URLs, this API bridged the gap by utilizing the Jimp library to extract pixel data from the images behind the scenes</p>
+            <Link className="flex flex-row gap-2" href="/projects/tas_gui">
+              <p className="text-white font uppercase">Read More</p>
+              <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+            </Link>
           </div>
         </div>
 
@@ -100,22 +119,7 @@ export default function Home() {
         </button>
       </div>
 
-      <div className={inter.className + " bg-[#2F2F2F] py-6 flex flex-col justify-center items-center"}>
-        <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2023</p>
-        <div className={inter.className + " lg:gap-2 lg:text-left text-center font-thin flex lg:flex-row flex-col text-white"}>
-          <a href="mailto:ramon@ramongarciajr.tech">Email: ramon@ramongarciajr.tech</a>
-          {size.width > 1024 && <p>&#8226;</p>}
-          <a href="tel:+19564389466">Phone: (956) 438-9466</a>
-        </div>
-        <div className="pt-2 flex flex-row gap-5">
-          <a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank">
-            <Image alt="linkedin" width="36" height="36" src="/linkedin-2-240.png"></Image>
-          </a>
-          <a href="https://github.com/LoneCuriosity" target="_blank">
-            <Image alt="github" width="36" height="36" src="/github-1-240.png"></Image>
-          </a>
-        </div>
-      </div>
+      <Footer/>
     </div>
   )
 }
