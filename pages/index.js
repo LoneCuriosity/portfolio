@@ -67,7 +67,7 @@ export default function Home() {
               <Tag BgColor="bg-orange-200" TxColor="text-orange-700" text="Rust" />
             </div>
             <p className="text-white font-thin">During my tenure as the telemetry lead for rocket launchers, I had the privilege of working on TAS (Telemetry Acquisition System), a remarkable project that aimed to revolutionize data collection during rocket flights. Our main objective was to develop a cutting-edge custom-designed circuit board capable of gathering an extensive array of information about the rocket&apos;s performance in flight. The data we diligently logged encompassed crucial parameters such as temperature, velocity, acceleration, pressure, and rotation, enabling us to gain invaluable insights for optimizing future missions and ensuring the highest levels of safety and efficiency.</p>
-            <Link className="flex flex-row gap-2" href="/projects/tas_gui">
+            <Link className="flex flex-row gap-2" href="/projects/coming_soon">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
@@ -89,7 +89,29 @@ export default function Home() {
               <Tag BgColor="bg-yellow-200" TxColor="text-yellow-700" text="jimp" />
             </div>
             <p className="text-white font-thin">The reset image API, currently in use, serves as a crucial tool for extracting pixel data from public image URLs and returning it in the form of a JSON object. Originally developed to facilitate the integration of image data into a custom script for the game Garry&apos;s Mod, this API worked seamlessly with an E2 script within the game, enabling the display of images. Since the game lacked a built-in mechanism to directly pass image URLs, this API bridged the gap by utilizing the Jimp library to extract pixel data from the images behind the scenes</p>
-            <Link className="flex flex-row gap-2" href="/projects/tas_gui">
+            <Link className="flex flex-row gap-2" href="/projects/coming_soon">
+              <p className="text-white font uppercase">Read More</p>
+              <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="relative basis-1/3 aspect-video w-full">
+            <Image src="/portfolio.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
+          </div>
+          <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+            <div>
+              <Title>Portfolio Website</Title>
+              <p className="text-white text-xl">2023</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <Tag BgColor="bg-teal-200" TxColor="text-teal-700" text="tailwind" />
+              <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js"/>
+              <Tag BgColor="bg-zinc-200" TxColor="text-zinc-700" text="Next.js" />
+            </div>
+            <p className="text-white font-thin">As my portfolio project began to expand, I envisioned creating a website to showcase and share my work with a wider audience. In pursuit of this goal, I sought to make it a valuable learning experience. That&apos;s when I decided to embrace a framework that was gaining popularity at the time. My choice fell upon Next.js, as it presented a new and promising approach. Having previous experience with React.js, Next.js seemed like a natural progression, allowing me to explore new concepts while building upon my existing knowledge. I&apos;m grateful for this decision as it deepened my understanding of Next.js and React.js, providing me with a practical project to apply these skills in a real-world context.</p>
+            <Link className="flex flex-row gap-2" href="/projects/portfolio">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
