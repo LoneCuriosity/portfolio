@@ -11,10 +11,10 @@ const Navbar = (props) => {
 
     return (
         <>
-            <div className="lg:hidden flex flex-col">
+            <div className="lg:hidden flex flex-col z-10">
                 <button onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ?
-                        <Image alt="menu" width="48" height="48" src="/x-mark-lined-240.png" class="absolute top-0 z-10"></Image>
+                        <Image alt="menu" width="48" height="48" src="/x-mark-lined-240.png" className="absolute top-0 z-10"></Image>
                         :
                         <Image alt="menu" width="48" height="48" src="/menu-left-lined-240.png" className="absolute top-0 pl-2 z-10"></Image>
                     }
@@ -22,13 +22,23 @@ const Navbar = (props) => {
                 {menuOpen &&
                     <div className="absolute w-full">
                         <ul className={inter.className + " flex flex-col gap-3 py-3 bg-[#161616] text-white items-center bg-opacity-90"}>
+                            {currentPage != "/" &&
+                                <>
+                                    <li><a href="/" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Home</a></li>
+                                    <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
+                                </>
+                            }
                             <li><a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>LinkedIn</a></li>
                             <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
                             <li><a href="https://github.com/LoneCuriosity" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Github</a></li>
-                            <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
-                            <li><a href="#projects" onClick={() => setMenuOpen(!menuOpen)}>Projects</a></li>
-                            <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
-                            <li><a href="#about" onClick={() => setMenuOpen(!menuOpen)}>About Me</a></li>
+                            {currentPage == "/" &&
+                                <>
+                                    <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
+                                    <li><a href="#projects" onClick={() => setMenuOpen(!menuOpen)}>Projects</a></li>
+                                    <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
+                                    <li><a href="#about" onClick={() => setMenuOpen(!menuOpen)}>About Me</a></li>
+                                </>
+                            }
                             <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
                             <li><a href="/Ramon Garcia Jr - Resume.pdf" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Resume</a></li>
                         </ul>

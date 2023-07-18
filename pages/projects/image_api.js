@@ -1,25 +1,24 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 const inter = Inter({ weight: ['400', '200'], subsets: ['latin'] })
 import Link from "next/link";
 
 const Portfolio = () => {
     return (
         <>
-            <div className="h-screen flex flex-col bg-[#161616] bg-dotted-spacing-[40px] bg-dotted-[#646464]">
+            <div className="h-full lg:h-screen flex flex-col bg-[#161616] bg-dotted-spacing-[40px] bg-dotted-[#646464]">
                 <Navbar Title="IMAGE REST API"/>
                 <div className="flex flex-col px-[10%] py-4 gap-4 h-full">
 
-                    <div className="flex flex-row basis-4/6 rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
+                    <div className="flex-row lg:basis-4/6 aspect-video flex rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
                         <div className="relative flex-1">
                             <Image src="/Rest_Image_API.png" fill alt="TAS v2 #1" className="object-cover"></Image>
                         </div>
-                        
                     </div>
 
-                    <div className="flex flex-row gap-4 basis-2/6">
+                    <div className="flex flex-col lg:flex-row gap-4 basis-2/6">
                         <div className="basis-1/6 bg-[#1B1B1B] rounded-lg p-2 flex flex-col border-2 border-[#2F2F2F]">
                             <h1 className={inter.className + " text-[#F0F0F0] text-xl pb-1"}>STATUS</h1>
                             <hr className='border-0 bg-[#2F2F2F] h-[2px]'></hr>
