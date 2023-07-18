@@ -67,7 +67,7 @@ export default function Home() {
               <Tag BgColor="bg-orange-200" TxColor="text-orange-700" text="Rust" />
             </div>
             <p className="text-white font-thin">During my tenure as the telemetry lead for rocket launchers, I had the privilege of working on TAS (Telemetry Acquisition System), a remarkable project that aimed to revolutionize data collection during rocket flights. Our main objective was to develop a cutting-edge custom-designed circuit board capable of gathering an extensive array of information about the rocket&apos;s performance in flight. The data we diligently logged encompassed crucial parameters such as temperature, velocity, acceleration, pressure, and rotation, enabling us to gain invaluable insights for optimizing future missions and ensuring the highest levels of safety and efficiency.</p>
-            <Link className="flex flex-row gap-2" href="/projects/coming_soon">
+            <Link className="flex flex-row gap-2" href="/projects/tas_gui">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
@@ -89,7 +89,7 @@ export default function Home() {
               <Tag BgColor="bg-yellow-200" TxColor="text-yellow-700" text="jimp" />
             </div>
             <p className="text-white font-thin">The reset image API, currently in use, serves as a crucial tool for extracting pixel data from public image URLs and returning it in the form of a JSON object. Originally developed to facilitate the integration of image data into a custom script for the game Garry&apos;s Mod, this API worked seamlessly with an E2 script within the game, enabling the display of images. Since the game lacked a built-in mechanism to directly pass image URLs, this API bridged the gap by utilizing the Jimp library to extract pixel data from the images behind the scenes</p>
-            <Link className="flex flex-row gap-2" href="/projects/coming_soon">
+            <Link className="flex flex-row gap-2" href="/projects/image_api">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
@@ -112,6 +112,28 @@ export default function Home() {
             </div>
             <p className="text-white font-thin">As my portfolio project began to expand, I envisioned creating a website to showcase and share my work with a wider audience. In pursuit of this goal, I sought to make it a valuable learning experience. That&apos;s when I decided to embrace a framework that was gaining popularity at the time. My choice fell upon Next.js, as it presented a new and promising approach. Having previous experience with React.js, Next.js seemed like a natural progression, allowing me to explore new concepts while building upon my existing knowledge. I&apos;m grateful for this decision as it deepened my understanding of Next.js and React.js, providing me with a practical project to apply these skills in a real-world context.</p>
             <Link className="flex flex-row gap-2" href="/projects/portfolio">
+              <p className="text-white font uppercase">Read More</p>
+              <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex flex-col xl:flex-row gap-6">
+          <div className="relative basis-1/3 aspect-video w-full">
+            <Image src="/Semester_Project.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
+          </div>
+          <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+            <div>
+              <Title>Semester Project</Title>
+              <p className="text-white text-xl">2023</p>
+            </div>
+            <div className="flex flex-row gap-2">
+              <Tag BgColor="bg-fuchsia-200" TxColor="text-fuchsia-700" text="SQL" />
+              <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js"/>
+              <Tag BgColor="bg-cyan-200" TxColor="text-cyan-700" text="json" />
+            </div>
+            <p className="text-white font-thin">During the 2023 spring semester at UTRGV, I undertook a semester project that involved developing a comprehensive access control system. This system incorporated a server, client application, and Raspberry Pi to manage user access to an application. The process involved users inputting a physical code through the Raspberry Pi&apos;s GPIO pins, which was then transmitted to a server running SQL. The server stored the last entered code in an SQL database. On the client side, a Beeware app requested the last known code from the server and compared it to a predetermined correct code. If the verification was successful, users were granted access to the remaining functionalities of the application. This project provided a practical opportunity to explore server-side development, client-side app creation, and hardware interaction using a Raspberry Pi, resulting in a comprehensive access control solution.</p>
+            <Link className="flex flex-row gap-2" href="/projects/semester_project">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
             </Link>
