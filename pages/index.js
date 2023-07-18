@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
-              <Title>Image Reset API</Title>
+              <Title>Image Rest API</Title>
               <p className="text-white text-xl">2023</p>
             </div>
             <div className="flex flex-row gap-2">
@@ -88,7 +88,7 @@ export default function Home() {
               <Tag BgColor="bg-cyan-200" TxColor="text-cyan-700" text="json" />
               <Tag BgColor="bg-yellow-200" TxColor="text-yellow-700" text="jimp" />
             </div>
-            <p className="text-white font-thin">The reset image API, currently in use, serves as a crucial tool for extracting pixel data from public image URLs and returning it in the form of a JSON object. Originally developed to facilitate the integration of image data into a custom script for the game Garry&apos;s Mod, this API worked seamlessly with an E2 script within the game, enabling the display of images. Since the game lacked a built-in mechanism to directly pass image URLs, this API bridged the gap by utilizing the Jimp library to extract pixel data from the images behind the scenes</p>
+            <p className="text-white font-thin">The rest image API, currently in use, serves as a crucial tool for extracting pixel data from public image URLs and returning it in the form of a JSON object. Originally developed to facilitate the integration of image data into a custom script for the game Garry&apos;s Mod, this API worked seamlessly with an E2 script within the game, enabling the display of images. Since the game lacked a built-in mechanism to directly pass image URLs, this API bridged the gap by utilizing the Jimp library to extract pixel data from the images behind the scenes</p>
             <Link className="flex flex-row gap-2" href="/projects/image_api">
               <p className="text-white font uppercase">Read More</p>
               <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>

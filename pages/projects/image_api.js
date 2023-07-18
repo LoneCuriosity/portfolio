@@ -9,7 +9,7 @@ const Portfolio = () => {
     return (
         <>
             <div className="h-screen flex flex-col bg-[#161616] bg-dotted-spacing-[40px] bg-dotted-[#646464]">
-                <Navbar Title="IMAGE RESET API"/>
+                <Navbar Title="IMAGE REST API"/>
                 <div className="flex flex-col px-[10%] py-4 gap-4 h-full">
 
                     <div className="flex flex-row basis-4/6 rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
@@ -74,7 +74,7 @@ const Portfolio = () => {
                         <div className="h-full basis-5/6 bg-[#1B1B1B] rounded-lg p-2 flex flex-col border-2 border-[#2F2F2F]">
                             <h1 className={inter.className + " text-[#F0F0F0] text-xl pb-1"}>DESCRIPTION</h1>
                             <hr className='border-0 bg-[#2F2F2F] h-[2px]'></hr>
-                            <p className="text-white font-thin">This simple reset image API was initially conceived as a side project for a game. Its development stemmed from the game&apos;s limitation of allowing players to manually draw pixels on the screen using x and y coordinates along with RGB codes. However, there was no built-in functionality to directly provide an image URL for drawing on the in-game screen. To bridge this gap, the API was created. The API operates by accepting a URL pointing to an image on the internet. It then processes each pixel of the image, extracting its RGB code. Once the entire image is indexed, the API combines all the pixel data into a single large JSON array, which is subsequently returned as the output. In the game, this JSON array is iterated over, and the pixel data is used to render the image on the screen.</p>
+                            <p className="text-white font-thin">This simple rest image API was initially conceived as a side project for a game. Its development stemmed from the game&apos;s limitation of allowing players to manually draw pixels on the screen using x and y coordinates along with RGB codes. However, there was no built-in functionality to directly provide an image URL for drawing on the in-game screen. To bridge this gap, the API was created. The API operates by accepting a URL pointing to an image on the internet. It then processes each pixel of the image, extracting its RGB code. Once the entire image is indexed, the API combines all the pixel data into a single large JSON array, which is subsequently returned as the output. In the game, this JSON array is iterated over, and the pixel data is used to render the image on the screen.</p>
                             <br></br>
                             <p className="text-white font-thin">Behind the scenes, the API also requires the screen dimensions as input. This information is utilized to crop the provided image to match the resolution of the game&apos;s screen before processing the pixel information. This ensures a consistent and accurate representation of the image within the game environment. For those interested, a live demo of the API can be accessed on the project&apos;s GitHub repository, offering an interactive demonstration of its functionality.</p>
                         </div>
