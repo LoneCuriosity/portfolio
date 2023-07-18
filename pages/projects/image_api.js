@@ -14,7 +14,7 @@ const Portfolio = () => {
 
                     <div className="flex flex-row basis-4/6 rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
                         <div className="relative flex-1">
-                            <Image src="/Image API.png" fill alt="TAS v2 #1" className="object-cover"></Image>
+                            <Image src="/Rest_Image_API.png" fill alt="TAS v2 #1" className="object-cover"></Image>
                         </div>
                         
                     </div>

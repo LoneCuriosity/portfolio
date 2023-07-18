@@ -76,7 +76,7 @@ export default function Home() {
 
         <div className="flex flex-col xl:flex-row gap-6">
           <div className="relative basis-1/3 aspect-video w-full">
-            <Image src="/Image API.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
+            <Image src="/Rest_Image_API.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
           </div>
           <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
             <div>
