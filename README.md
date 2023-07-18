@@ -21,25 +21,25 @@ An advantageous feature of employing Next.js lies in its comprehensive optimizat
 Clone the project
 
 ```bash
-  git clone https://github.com/LoneCuriosity/portfolio
+git clone https://github.com/LoneCuriosity/portfolio
 ```
 
 Go to the project directory
 
 ```bash
-  cd portfolio
+cd portfolio
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 Start the server
 
 ```bash
-  npm run start
+npm run start
 ```
 
 
