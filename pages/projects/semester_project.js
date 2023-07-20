@@ -12,7 +12,7 @@ const Portfolio = () => {
                 <Navbar Title="SEMESTER PROJECT"/>
                 <div className="flex flex-col px-[10%] py-4 gap-4 h-full">
 
-                    <div className="flex-row lg:basis-4/6 aspect-video flex rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
+                    <div className="flex-row lg:basis-4/6 aspect-video lg:aspect-auto flex rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
                         <div className="relative flex-1">
                             <Image src="/Semester_Project.png" fill alt="TAS v2 #1" className="object-cover"></Image>
                         </div>
