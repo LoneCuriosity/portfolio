@@ -24,7 +24,7 @@ const Navbar = (props) => {
                         <ul className={inter.className + " flex flex-col gap-3 py-3 bg-[#161616] text-white items-center bg-opacity-90"}>
                             {currentPage != "/" &&
                                 <>
-                                    <li><a href="/" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Home</a></li>
+                                    <li><Link href="/" onClick={() => setMenuOpen(!menuOpen)}>Home</Link></li>
                                     <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
                                 </>
                             }
