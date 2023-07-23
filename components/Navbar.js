@@ -37,6 +37,8 @@ const Navbar = (props) => {
                                     <li><a href="#projects" onClick={() => setMenuOpen(!menuOpen)}>Projects</a></li>
                                     <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
                                     <li><a href="#about" onClick={() => setMenuOpen(!menuOpen)}>About Me</a></li>
+                                    <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
+                                    <li><a href="#certifications" onClick={() => setMenuOpen(!menuOpen)}>Certifications</a></li>
                                 </>
                             }
                             <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
@@ -74,6 +76,8 @@ const Navbar = (props) => {
                             <li><a href="#projects">Projects</a></li>
                             <li>/</li>
                             <li><a href="#about">About Me</a></li>
+                            <li>/</li>
+                            <li><a href="#certifications">Certifications</a></li>
                             <li>/</li>
                         </>
                         }
