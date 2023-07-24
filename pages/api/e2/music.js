@@ -7,11 +7,13 @@ export default function handler(req, res) {
     if(ytdl.validateURL(URL)){
         let stream = ytdl(URL,{ quality: 'highestaudio' })
 
-        res.setHeader('Content-Disposition', `attachment; filename=song.mp3`);
         ffmpeg(stream)
+            .on('error', function(err) {
+                console.log(err);
+            })
             .audioBitrate(128)
             .format('mp3')
-            .pipe(res, { end: true });
+            .writeToStream(res, { end: true });
     } else {
         res.status(400).json({"ERROR":"Not valid URL"})
     }
