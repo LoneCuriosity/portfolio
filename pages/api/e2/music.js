@@ -7,7 +7,7 @@ export default function handler(req, res) {
     if(ytdl.validateURL(URL)){
         let stream = ytdl(URL,{ quality: 'highestaudio' })
 
-        //res.setHeader('Content-Disposition', `attachment; filename=song.mp3`);
+        res.setHeader('Content-Disposition', `attachment; filename=song.mp3`);
         ffmpeg(stream)
             .audioBitrate(128)
             .format('mp3')
