@@ -160,7 +160,7 @@ export default function Home() {
           <Link href="https://www.certmetrics.com/comptia/public/verification.aspx?code=RF5NJ8Z8K7PLVKK6">
             <div className="flex flex-col gap-2 justify-center items-center">
               <Image className="rounded" width="300" height="300" src="/NetworkPlus Logo Certified CE White.png" alt="TAS" />
-              <p className={inter.className + " text-white font-light uppercase pt-3"}>veritication code: RF5NJ8Z8K7PLVKK6</p>
+              <p className={inter.className + " text-white font-light uppercase pt-3"}>verification code: RF5NJ8Z8K7PLVKK6</p>
             </div>
           </Link>
         </div>

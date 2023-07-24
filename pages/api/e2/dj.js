@@ -19,7 +19,6 @@ export default function handler(req, res) {
                 res.status(200).json({"status":"done"})
             })
     } else {
-        res.setHeader('Content-Type', 'audio/mpeg')
-        res.send(songBuffer)
+        res.status(400).json({"ERROR":"Invalid URL"})
     }
 }
