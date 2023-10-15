@@ -14,7 +14,7 @@ const TAS = () => {
 
                     <div className="flex-row lg:basis-4/6 aspect-video lg:aspect-auto flex rounded-lg overflow-hidden border-2 border-[#2F2F2F]">
                         <div className="relative basis-1/2">
-                            <Image src="/hackathon_2023.png" fill alt="TAS v2 #1" className="object-cover"></Image>
+                            <Image src="/hackathon_2023.png" fill alt="Hackathon 2023" className="object-cover"></Image>
                         </div>
                         <div className="relative basis-1/2">
                             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kjavJkyq234?si=2cFJ-a7MOrhZFfth" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
