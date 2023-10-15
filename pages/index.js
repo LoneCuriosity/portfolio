@@ -47,7 +47,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-2">
                 <Tag BgColor="bg-lime-200" TxColor="text-lime-700" text="Soldering" />
-                <Tag BgColor="bg-blue-200" TxColor="text-blue-700" text="CAD" />
+                <Tag BgColor="bg-rose-200" TxColor="text-rose-700" text="CAD" />
                 <Tag BgColor="bg-green-200" TxColor="text-green-700" text="C++" />
               </div>
               <p className="text-white font-thin">As the telemetry lead for rocket launchers, I had the opportunity to contribute to an exciting project called TAS (Telemetry Acquisition System). This project involved the design and development of a custom circuit board specifically tailored to gather an extensive range of data during rocket flights. Our primary objective was to capture critical information, including temperature, velocity, acceleration, pressure, and rotation, enabling us to acquire a comprehensive understanding of the rocket&apos;s behavior throughout its journey into space. By meticulously logging these parameters, we aimed to enhance our analysis and improve the overall performance and safety of future missions.</p>
@@ -113,7 +113,7 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-2">
                 <Tag BgColor="bg-teal-200" TxColor="text-teal-700" text="tailwind" />
-                <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js"/>
+                <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js" />
                 <Tag BgColor="bg-zinc-200" TxColor="text-zinc-700" text="Next.js" />
               </div>
               <p className="text-white font-thin">As my portfolio project began to expand, I envisioned creating a website to showcase and share my work with a wider audience. In pursuit of this goal, I sought to make it a valuable learning experience. That&apos;s when I decided to embrace a framework that was gaining popularity at the time. My choice fell upon Next.js, as it presented a new and promising approach. Having previous experience with React.js, Next.js seemed like a natural progression, allowing me to explore new concepts while building upon my existing knowledge. I&apos;m grateful for this decision as it deepened my understanding of Next.js and React.js, providing me with a practical project to apply these skills in a real-world context.</p>
@@ -135,11 +135,33 @@ export default function Home() {
               </div>
               <div className="flex flex-row gap-2">
                 <Tag BgColor="bg-fuchsia-200" TxColor="text-fuchsia-700" text="SQL" />
-                <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js"/>
+                <Tag BgColor="bg-emerald-200" TxColor="text-emerald-700" text="node.js" />
                 <Tag BgColor="bg-cyan-200" TxColor="text-cyan-700" text="json" />
               </div>
               <p className="text-white font-thin">During the 2023 spring semester at UTRGV, I undertook a semester project that involved developing a comprehensive access control system. This system incorporated a server, client application, and Raspberry Pi to manage user access to an application. The process involved users inputting a physical code through the Raspberry Pi&apos;s GPIO pins, which was then transmitted to a server running SQL. The server stored the last entered code in an SQL database. On the client side, a Beeware app requested the last known code from the server and compared it to a predetermined correct code. If the verification was successful, users were granted access to the remaining functionalities of the application. This project provided a practical opportunity to explore server-side development, client-side app creation, and hardware interaction using a Raspberry Pi, resulting in a comprehensive access control solution.</p>
               <Link className="flex flex-row gap-2" href="/projects/semester_project">
+                <p className="text-white font uppercase">Read More</p>
+                <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-col xl:flex-row gap-6">
+            <div className="relative basis-1/3 aspect-video w-full">
+              <Image src="/hackathon_2023.png" alt="TAS GUI" size={size.width < 1024 ? "100vw" : ""} fill className="object-cover rounded" />
+            </div>
+            <div className={inter.className + " flex flex-col gap-2 basis-2/3"}>
+              <div>
+                <Title>Hackathon</Title>
+                <p className="text-white text-xl">2023</p>
+              </div>
+              <div className="flex flex-row gap-2">
+                <Tag BgColor="bg-teal-200" TxColor="text-teal-700" text="tailwind" />
+                <Tag BgColor="bg-blue-200" TxColor="text-blue-700" text="react" />
+                <Tag BgColor="bg-red-200" TxColor="text-red-700" text="appwrite" />
+              </div>
+              <p className="text-white font-thin">During my 2023 semester at the University of Texas Rio Grande Valley (UTRGV), I had the opportunity to participate in a local hackathon. This experience provided me with valuable insights into effective teamwork and task delegation, as well as the seamless integration of frontend and backend frameworks. Throughout the hackathon, my team and I developed an application called &quot;FlexiFrenzy&quot;, which had a unique concept. Instead of traditional tweets, users shared their latest workout achievements. Although the app&apos;s premise was straightforward, it involved a robust backend built on Appwrite and a feature-rich frontend developed using React. The entire journey was truly remarkable, offering me not only technical knowledge but also valuable lessons in team collaboration and problem-solving.</p>
+              <Link className="flex flex-row gap-2" href="/projects/hackthon_2023">
                 <p className="text-white font uppercase">Read More</p>
                 <Image className="animate-slideRight" alt="arrow" width="20" height="20" src="/arrow-right-thin-240.png"></Image>
               </Link>
@@ -193,7 +215,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   )
 }
