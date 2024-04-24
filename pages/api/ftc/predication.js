@@ -4,7 +4,7 @@ export default async function handler(req, res) {
 
         try {
             const { spawn } = require('child_process');
-            const pythonProcess = spawn('python', ['./pages/api/ftc/app.py', red1, red2, blue1, blue2, session, event]);
+            const pythonProcess = spawn('python3', ['./pages/api/ftc/app.py', red1, red2, blue1, blue2, session, event]);
 
             pythonProcess.stdout.on('data', (data) => {
                 console.log(`Python script output: ${data}`);
