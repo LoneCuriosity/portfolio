@@ -178,18 +178,18 @@ export default function Home() {
           <div className="flex-grow border-0 bg-[#2F2F2F] h-[2px] mr-[10%]"></div>
         </div>
 
-        <div className="flex flex-row justify-around items-center py-2 px-[10%]">
+        <div className="flex lg:flex-row flex-col justify-around items-center py-2 px-[10%] gap-6 lg:gap-0">
           <Link href="https://www.certmetrics.com/comptia/public/verification.aspx?code=RF5NJ8Z8K7PLVKK6">
             <div className="flex flex-col gap-2 justify-center items-center">
               <Image className="rounded" width="300" height="300" src="/NetworkPlus Logo Certified CE White.png" alt="NetworkPlus Logo Certified CE White" />
-              <p className={inter.className + " text-white font-light uppercase pt-3"}>verification code: RF5NJ8Z8K7PLVKK6</p>
+              <p className={inter.className + " text-white font-light uppercase pt-3 text-center"}>verification code: RF5NJ8Z8K7PLVKK6</p>
             </div>
           </Link>
 
           <Link href="https://www.certmetrics.com/comptia/public/verification.aspx?code=NTPZNDKW38LLVL37">
             <div className="flex flex-col gap-2 justify-center items-center">
               <Image className="rounded" width="300" height="300" src="/SecurityPlus Logo Certified CE White.png" alt="SecurityPlus Logo Certified CE White" />
-              <p className={inter.className + " text-white font-light uppercase pt-3"}>verification code: NTPZNDKW38LLVL37</p>
+              <p className={inter.className + " text-white font-light uppercase pt-3 text-center"}>verification code: NTPZNDKW38LLVL37</p>
             </div>
           </Link>
         </div>
