@@ -3,13 +3,35 @@ import Image from "next/image"
 import { Inter } from "next/font/google"
 import Tag from "@/components/Tag"
 const inter = Inter({ weight: ["400", "200"], subsets: ["latin"] })
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Title from "@/components/Title"
 import Link from "next/link"
 import Footer from "@/components/Footer"
 
 export default function Home() {
   const size = useWindowSize();
+  const keyCombo = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+  const [lastTenKeys, setLastTenKeys] = useState([]);
+
+  const handleKeyPress = useCallback((event) => {
+    setLastTenKeys((prev) => [...prev, event.key]);
+  }, []);
+
+  useEffect(() => {
+    if (lastTenKeys.length > 10) {
+      setLastTenKeys((prev) => prev.slice(1));
+    }
+    if (lastTenKeys.join('') === keyCombo.join('')) {
+      
+    }
+  }, [lastTenKeys])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
 
   return (
     <div className="bg-[#161616]" >
