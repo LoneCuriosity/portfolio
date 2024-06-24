@@ -9,7 +9,7 @@ const Footer = () => {
     
     return (
         <div className={inter.className + " bg-[#2F2F2F] py-6 flex flex-col justify-center items-center"}>
-            <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2023</p>
+            <p className="text-white font-thin">Created by Ramon Garcia Jr &copy; 2024</p>
             <div className={inter.className + " lg:gap-2 lg:text-left text-center font-thin flex lg:flex-row flex-col text-white"}>
             <a href="mailto:ramon@ramongarciajr.tech">Email: ramon@ramongarciajr.tech</a>
             {size.width > 1024 && <p>&#8226;</p>}

@@ -7,11 +7,14 @@ import { useState, useEffect, useCallback } from "react"
 import Title from "@/components/Title"
 import Link from "next/link"
 import Footer from "@/components/Footer"
+import RickRoll from "@/components/RickRoll"
 
 export default function Home() {
   const size = useWindowSize();
   const keyCombo = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
   const [lastTenKeys, setLastTenKeys] = useState([]);
+  const [konamiCode, setKonamiCode] = useState(false);
+  const RickRollTime = 5000;
 
   const handleKeyPress = useCallback((event) => {
     setLastTenKeys((prev) => [...prev, event.key]);
@@ -22,7 +25,11 @@ export default function Home() {
       setLastTenKeys((prev) => prev.slice(1));
     }
     if (lastTenKeys.join('') === keyCombo.join('')) {
-      
+      setKonamiCode(true);
+      setTimeout(() => {
+        setKonamiCode(false);
+        setLastTenKeys([]);
+      }, RickRollTime);
     }
   }, [lastTenKeys])
 
@@ -34,8 +41,9 @@ export default function Home() {
   }, [handleKeyPress]);
 
   return (
-    <div className="bg-[#161616]" >
-      <div className="h-screen flex flex-col bg-dotted-spacing-[40px] bg-dotted-[#646464]">
+    <div className="bg-[#161616] relative"  >
+      <RickRoll  konamiCode={konamiCode}/>
+      <section className="h-screen flex flex-col bg-dotted-spacing-[40px] bg-dotted-[#646464]">
         <Navbar />
         <div className="flex flex-col flex-1">
           <div className="flex flex-col gap-5 justify-center items-center flex-1">
@@ -48,9 +56,9 @@ export default function Home() {
             <Image className="rotate-90" alt="arrow" width="20" height="20" src="/angel-right-thin-240.png"></Image>
           </button>
         </div>
-      </div>
+      </section>
 
-      <div id="projects">
+      <section id="projects">
         <div className="relative flex py-6 items-center">
           <div className="flex-grow border-0 bg-[#2F2F2F] h-[2px] ml-[10%]"></div>
           <span className={inter.className + " mx-4 flex-shrink text-white uppercase font-light text-2xl"}>projects</span>
@@ -191,9 +199,9 @@ export default function Home() {
           </div>
 
         </div>
-      </div>
+      </section>
 
-      <div id="certifications">
+      <section id="certifications">
         <div className="relative flex py-6 items-center">
           <div className="flex-grow border-0 bg-[#2F2F2F] h-[2px] ml-[10%]"></div>
           <span className={inter.className + " mx-4 flex-shrink text-white uppercase font-light text-2xl"}>certifications</span>
@@ -215,9 +223,9 @@ export default function Home() {
             </div>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div id="about">
+      <section id="about">
         <div className="relative flex py-6 items-center">
           <div className="flex-grow border-0 bg-[#2F2F2F] h-[2px] ml-[10%]"></div>
           <span className={inter.className + " mx-4 flex-shrink text-white uppercase font-light text-2xl"}>about me</span>
@@ -242,7 +250,7 @@ export default function Home() {
             <Image className="animate-slideLeft" alt="arrow" width="20" height="20" src="/angel-left-thin-240.png"></Image>
           </button>
         </div>
-      </div>
+      </section>
 
       <Footer />
     </div>
