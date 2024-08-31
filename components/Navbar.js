@@ -30,7 +30,7 @@ const Navbar = (props) => {
                             }
                             <li><a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>LinkedIn</a></li>
                             <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
-                            <li><a href="https://github.com/LoneCuriosity" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Github</a></li>
+                            <li><a href="https://github.com/RamonGarciaJr956" target="_blank" onClick={() => setMenuOpen(!menuOpen)}>Github</a></li>
                             {currentPage == "/" &&
                                 <>
                                     <hr className='border-0 bg-[#2F2F2F] h-[2px] w-[75%]'></hr>
@@ -69,7 +69,7 @@ const Navbar = (props) => {
                         }
                         <li><a href="https://www.linkedin.com/in/ramon-garcia-787b6921b/" target="_blank">LinkedIn</a></li>
                         <li>/</li>
-                        <li><a href="https://github.com/LoneCuriosity" target="_blank">Github</a></li>
+                        <li><a href="https://github.com/RamonGarciaJr956" target="_blank">Github</a></li>
                         <li>/</li>
                         {currentPage == "/" &&
                         <>

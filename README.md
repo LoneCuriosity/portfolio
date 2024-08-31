@@ -21,7 +21,7 @@ An advantageous feature of employing Next.js lies in its comprehensive optimizat
 Clone the project
 
 ```bash
-git clone https://github.com/LoneCuriosity/portfolio
+git clone https://github.com/RamonGarciaJr956/portfolio
 ```
 
 Go to the project directory
