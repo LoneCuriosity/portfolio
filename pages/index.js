@@ -49,7 +49,7 @@ export default function Home() {
           <div className="flex flex-col gap-5 justify-center items-center flex-1">
             <Image alt="me" width="200" height="200" src="/me.png"></Image>
             <p className={inter.className + " text-xl text-[#646464]"}>Hi, I’m Ramon 👋</p>
-            <p className={inter.className + " text-center text-[9vw] bg-gradient-to-t from-[#FFFFFF] to-[#646464] bg-clip-text py-2 text-transparent lg:text-7xl"}>Web Developer <br /> Tinkerer, Creator and <br /> Programmer.</p>
+            <p className={inter.className + " text-center text-[9vw] bg-gradient-to-t from-[#FFFFFF] to-[#646464] bg-clip-text py-2 text-transparent lg:text-7xl"}>Web Developer <br /> Photographer, Creator and <br /> Programmer.</p>
           </div>
           <button className="flex flex-col items-center mb-5 animate-bounce">
             <p className={inter.className + " text-white font-light"}>Projects</p>
